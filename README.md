@@ -1,5 +1,5 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![](https://img.shields.io/cocoapods/p/ReactiveCleanKit.svg?style=plastic)
+[![](https://img.shields.io/cocoapods/p/ReactiveCleanKit.svg?style=plastic)](https://cocoapods.org/pods/ReactiveCleanKit)
 
 # RCKit
 
