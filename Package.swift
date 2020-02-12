@@ -11,7 +11,7 @@ let package = Package(
         .package(url: "https://github.com/Swinject/Swinject",  from: "2.7.1"),
     ],
     targets: [
-        .target(name: "RCKit", dependencies: ["RxSwift", "RxCocoa", "Swinject", "Reachability"])
+        .target(name: "RCKit", dependencies: ["RxSwift", "RxCocoa", "Swinject"])
     ]
 )
 
