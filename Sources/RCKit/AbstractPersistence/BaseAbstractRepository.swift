@@ -9,11 +9,17 @@
 import Foundation
 
 
+
+public protocol Identifiable {
+    associatedtype Identifier
+    var id: Identifier { get }
+}
+
 public protocol BaseAbstractRepository {
-    associatedtype T
+    associatedtype T: Identifiable
     func save(value: T)
     func remove(value: T)
-    func getById(id: String) -> T?
-    func remove(id: String)
+    func getById(id: T.Identifier) -> T?
+    func remove(id: T.Identifier)
     func get(predicate: NSPredicate) -> T?
 }
