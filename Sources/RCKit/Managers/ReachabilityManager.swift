@@ -45,6 +45,7 @@ public class DefaultReachabilityManager: NSObject, ReachabilityManager {
     private let reachability: SCNetworkReachability
     
     private let lock = NSLock()
+    private let queue = DispatchQueue(label: "com.rckit.reachability")
 
     public init(appStateManager: AppStateManager) {
         
@@ -110,10 +111,10 @@ public class DefaultReachabilityManager: NSObject, ReachabilityManager {
             return
         }
 
-        result = SCNetworkReachabilitySetDispatchQueue(reachability, q)
+        result = SCNetworkReachabilitySetDispatchQueue(reachability, queue)
 
         if !result {
-            print("failed to setup q")
+            print("failed to setup queue")
             return
         }
     }
