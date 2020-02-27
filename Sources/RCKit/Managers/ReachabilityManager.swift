@@ -44,7 +44,7 @@ public class DefaultReachabilityManager: NSObject, ReachabilityManager {
 
     private let reachability: SCNetworkReachability
     
-    private let q = DispatchQueue(label: "ReachabilityManager.sync.queue")
+    private let lock = NSLock()
 
     public init(appStateManager: AppStateManager) {
         
@@ -130,12 +130,12 @@ public class DefaultReachabilityManager: NSObject, ReachabilityManager {
     
     
     private func setValue(value: Bool){
-        q.sync{
-            if self.connectionIsReachable.value != value{
-                
-                self.connectionIsReachable.accept(value)
-            }
+        lock.lock()
+        if self.connectionIsReachable.value != value{
+
+            self.connectionIsReachable.accept(value)
         }
+        lock.unlock()
     }
     
     deinit {
