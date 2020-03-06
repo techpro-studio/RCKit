@@ -22,12 +22,9 @@
 		FA22FBBA2258A6B400E2E75A /* ActivityAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBB92258A6B400E2E75A /* ActivityAnimator.swift */; };
 		FA22FBBC2258A6CE00E2E75A /* CommonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBBB2258A6CE00E2E75A /* CommonErrors.swift */; };
 		FA22FBBE2258A75D00E2E75A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBBD2258A75D00E2E75A /* UIViewController+Extensions.swift */; };
-		FA22FBC32258A83D00E2E75A /* BaseAbstractRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBC22258A83D00E2E75A /* BaseAbstractRepository.swift */; };
-		FA22FBCA2258A91F00E2E75A /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBC92258A91F00E2E75A /* ModelProtocols.swift */; };
 		FA22FBCE2258A96700E2E75A /* DefaultBaseRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBCD2258A96700E2E75A /* DefaultBaseRemoteRepository.swift */; };
 		FA22FBD32258AB2400E2E75A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBD22258AB2400E2E75A /* Protocols.swift */; };
 		FA22FBD62258AB8A00E2E75A /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBD52258AB8A00E2E75A /* KeyboardObserver.swift */; };
-		FA81AAE522BCC17900355769 /* ThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81AAE422BCC17900355769 /* ThreadScheduler.swift */; };
 		FAFE66AB22BAABA60095ED19 /* StateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AA22BAABA60095ED19 /* StateOperation.swift */; };
 		FAFE66B122BAD6470095ED19 /* RunObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AE22BAD6470095ED19 /* RunObservable.swift */; };
 		FAFE66B222BAD6470095ED19 /* ErrorThrowablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AF22BAD6470095ED19 /* ErrorThrowablePresenter.swift */; };
@@ -55,12 +52,9 @@
 		FA22FBB92258A6B400E2E75A /* ActivityAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAnimator.swift; sourceTree = "<group>"; };
 		FA22FBBB2258A6CE00E2E75A /* CommonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrors.swift; sourceTree = "<group>"; };
 		FA22FBBD2258A75D00E2E75A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		FA22FBC22258A83D00E2E75A /* BaseAbstractRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAbstractRepository.swift; sourceTree = "<group>"; };
-		FA22FBC92258A91F00E2E75A /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
 		FA22FBCD2258A96700E2E75A /* DefaultBaseRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBaseRemoteRepository.swift; sourceTree = "<group>"; };
 		FA22FBD22258AB2400E2E75A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		FA22FBD52258AB8A00E2E75A /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
-		FA81AAE422BCC17900355769 /* ThreadScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadScheduler.swift; sourceTree = "<group>"; };
 		FAFE66AA22BAABA60095ED19 /* StateOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateOperation.swift; sourceTree = "<group>"; };
 		FAFE66AE22BAD6470095ED19 /* RunObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunObservable.swift; sourceTree = "<group>"; };
 		FAFE66AF22BAD6470095ED19 /* ErrorThrowablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorThrowablePresenter.swift; sourceTree = "<group>"; };
@@ -133,15 +127,6 @@
 			path = HTTP;
 			sourceTree = "<group>";
 		};
-		FA22FBBF2258A81500E2E75A /* AbstractPersistence */ = {
-			isa = PBXGroup;
-			children = (
-				FA22FBC92258A91F00E2E75A /* ModelProtocols.swift */,
-				FA22FBC22258A83D00E2E75A /* BaseAbstractRepository.swift */,
-			);
-			path = AbstractPersistence;
-			sourceTree = "<group>";
-		};
 		FA22FBCF2258AAFF00E2E75A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +178,6 @@
 		FAFE66B722BAEEF40095ED19 /* RCKit */ = {
 			isa = PBXGroup;
 			children = (
-				FA81AAE422BCC17900355769 /* ThreadScheduler.swift */,
 				FA22FBA822589F3300E2E75A /* Helpers.swift */,
 				FA22FBB02258A3B200E2E75A /* BaseFactory.swift */,
 				FA22FBBB2258A6CE00E2E75A /* CommonErrors.swift */,
@@ -203,7 +187,6 @@
 				FA22FBD12258AB0E00E2E75A /* Coordinator */,
 				FA22FBD02258AB0400E2E75A /* Presenter */,
 				FA22FBCF2258AAFF00E2E75A /* View */,
-				FA22FBBF2258A81500E2E75A /* AbstractPersistence */,
 			);
 			path = RCKit;
 			sourceTree = "<group>";
@@ -288,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA22FBCE2258A96700E2E75A /* DefaultBaseRemoteRepository.swift in Sources */,
-				FA81AAE522BCC17900355769 /* ThreadScheduler.swift in Sources */,
 				FA22FBB42258A40900E2E75A /* RequestFactory.swift in Sources */,
 				FAFE66AB22BAABA60095ED19 /* StateOperation.swift in Sources */,
 				FA22FBD62258AB8A00E2E75A /* KeyboardObserver.swift in Sources */,
@@ -298,9 +280,7 @@
 				FA22FBBC2258A6CE00E2E75A /* CommonErrors.swift in Sources */,
 				FAFE66B122BAD6470095ED19 /* RunObservable.swift in Sources */,
 				FA22FBB62258A4EF00E2E75A /* RequestPerformer.swift in Sources */,
-				FA22FBC32258A83D00E2E75A /* BaseAbstractRepository.swift in Sources */,
 				FA22FBA722589D8400E2E75A /* AppStateManager.swift in Sources */,
-				FA22FBCA2258A91F00E2E75A /* ModelProtocols.swift in Sources */,
 				FA22FBAF2258A33600E2E75A /* CoordinatorAction.swift in Sources */,
 				FA22FBAB22589F3D00E2E75A /* Coordinator.swift in Sources */,
 				FAFE66B522BADAE90095ED19 /* ResultStateOperation.swift in Sources */,
