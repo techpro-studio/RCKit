@@ -25,6 +25,7 @@
 		FA22FBCE2258A96700E2E75A /* DefaultBaseRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBCD2258A96700E2E75A /* DefaultBaseRemoteRepository.swift */; };
 		FA22FBD32258AB2400E2E75A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBD22258AB2400E2E75A /* Protocols.swift */; };
 		FA22FBD62258AB8A00E2E75A /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22FBD52258AB8A00E2E75A /* KeyboardObserver.swift */; };
+		FAA7B2F524324C47009211B9 /* ModalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA7B2F424324C47009211B9 /* ModalCoordinator.swift */; };
 		FAFE66AB22BAABA60095ED19 /* StateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AA22BAABA60095ED19 /* StateOperation.swift */; };
 		FAFE66B122BAD6470095ED19 /* RunObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AE22BAD6470095ED19 /* RunObservable.swift */; };
 		FAFE66B222BAD6470095ED19 /* ErrorThrowablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE66AF22BAD6470095ED19 /* ErrorThrowablePresenter.swift */; };
@@ -55,6 +56,7 @@
 		FA22FBCD2258A96700E2E75A /* DefaultBaseRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBaseRemoteRepository.swift; sourceTree = "<group>"; };
 		FA22FBD22258AB2400E2E75A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		FA22FBD52258AB8A00E2E75A /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		FAA7B2F424324C47009211B9 /* ModalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCoordinator.swift; sourceTree = "<group>"; };
 		FAFE66AA22BAABA60095ED19 /* StateOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateOperation.swift; sourceTree = "<group>"; };
 		FAFE66AE22BAD6470095ED19 /* RunObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunObservable.swift; sourceTree = "<group>"; };
 		FAFE66AF22BAD6470095ED19 /* ErrorThrowablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorThrowablePresenter.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				FA22FBAA22589F3D00E2E75A /* Coordinator.swift */,
 				FA22FBAE2258A33600E2E75A /* CoordinatorAction.swift */,
+				FAA7B2F424324C47009211B9 /* ModalCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				FA22FBBC2258A6CE00E2E75A /* CommonErrors.swift in Sources */,
 				FAFE66B122BAD6470095ED19 /* RunObservable.swift in Sources */,
 				FA22FBB62258A4EF00E2E75A /* RequestPerformer.swift in Sources */,
+				FAA7B2F524324C47009211B9 /* ModalCoordinator.swift in Sources */,
 				FA22FBA722589D8400E2E75A /* AppStateManager.swift in Sources */,
 				FA22FBAF2258A33600E2E75A /* CoordinatorAction.swift in Sources */,
 				FA22FBAB22589F3D00E2E75A /* Coordinator.swift in Sources */,
