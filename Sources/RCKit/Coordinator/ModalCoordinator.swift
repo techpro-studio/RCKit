@@ -8,17 +8,20 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 open class ModalCoordinator:  BaseCoordinator, UIAdaptivePresentationControllerDelegate  {
 
     public var finished: (()-> Void)!
 
     public unowned let sourceViewController: UIViewController
-    public var navigationController: UINavigationController!
+    public let navigationController: UINavigationController
 
     public init(sourceViewController: UIViewController, container: Container) {
         self.sourceViewController = sourceViewController
+        self.navigationController = UINavigationController()
         super.init(container: container)
+        self.navigationController.delegate = self
     }
 
     override final func performStop(completionHandler: @escaping () -> Void) {
@@ -35,10 +38,9 @@ open class ModalCoordinator:  BaseCoordinator, UIAdaptivePresentationControllerD
         }
     }
 
-    public func showViewController(viewContoller: UIViewController, modalPresentationStyle: UIModalPresentationStyle = .pageSheet) {
-       navigationController = UINavigationController(rootViewController: viewContoller)
-        navigationController.modalPresentationStyle = modalPresentationStyle
-       navigationController.presentationController!.delegate = self
+    public func showRootViewController(viewContoller: UIViewController, modalPresentationStyle: UIModalPresentationStyle = .pageSheet) {
+       navigationController.setViewControllers([viewContoller], animated: false)
+       navigationController.modalPresentationStyle = modalPresentationStyle
        sourceViewController.present(navigationController, animated: true, completion: nil)
     }
 }
