@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Swinject
 
-open class ModalCoordinator:  BaseCoordinator, UIAdaptivePresentationControllerDelegate  {
+open class ModalCoordinator:  BaseCoordinator, UIAdaptivePresentationControllerDelegate, UINavigationControllerDelegate  {
 
     public var finished: (()-> Void)!
 
@@ -24,11 +24,11 @@ open class ModalCoordinator:  BaseCoordinator, UIAdaptivePresentationControllerD
         self.navigationController.delegate = self
     }
 
-    override final func performStop(completionHandler: @escaping () -> Void) {
+    public override final func performStop(completionHandler: @escaping () -> Void) {
         self.navigationController.dismiss(animated: true, completion: completionHandler)
     }
 
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+    public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         self.finished()
     }
 
