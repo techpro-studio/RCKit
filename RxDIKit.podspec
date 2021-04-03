@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'ReactiveCleanKit'
+  s.name             = 'RxDIKit'
   s.version          = '0.1.1'
   s.summary          = 'Lib Rx DI'
   s.description      = "Lib for building reactive apps, based on RxSwift, Swinject"
