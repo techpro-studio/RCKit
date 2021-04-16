@@ -1,6 +1,5 @@
 //
 //  ErrorThrowablePresenter.swift
-//  GoMoney
 //
 
 import Foundation
@@ -18,7 +17,7 @@ public protocol ErrorThrowablePresenterContainer: DisposeBagContainer {
 
 public extension ErrorThrowablePresenterContainer where Self: UIViewController {
    func subscribeOnErrors() {
-        self.errorThrowablePresenter.error.asObservable().observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] error in
+    self.errorThrowablePresenter.error.asObservable().observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] error in
             guard let self = self else { return }
             if let common = error as? CommonErrors, common == .userCancelled {
                 return

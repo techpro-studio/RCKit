@@ -24,7 +24,7 @@ public protocol LoadablePresenterContainer: DisposeBagContainer {
 public extension LoadablePresenterContainer where Self: UIViewController {
 
     func subscribeOnLoading() {
-        self.loadablePresenter.isLoading.asObservable().observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] loading in
+        self.loadablePresenter.isLoading.asObservable().observe(on: MainScheduler.instance).subscribe(onNext: {[weak self] loading in
             guard let self = self else { return }
             if loading {
                 self.activityAnimator.startActivity()
